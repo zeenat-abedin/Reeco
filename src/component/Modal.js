@@ -1,17 +1,17 @@
-// Modal.js
-import Image from "../assets/Images/Img1.jpg"
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { closeModalEdit, openModalEdit } from '../pages/EditModalSlice/EditModalSlice';
-import { cancelEditing, updateEditedData } from '../pages/EditOrderListSlice/EditOrderListSlice';
+
 import { Box, Button, IconButton, Modal, TextField, Typography } from '@mui/material';
 import ClearIcon from '@mui/icons-material/Clear';
 import ControlPointTwoToneIcon from '@mui/icons-material/ControlPointTwoTone';
 import RemoveTwoToneIcon from '@mui/icons-material/RemoveTwoTone';
+
+import { closeModalEdit } from '../pages/EditModalSlice/EditModalSlice';
+import Image from "../assets/Images/Img1.jpg";
+
 export default function CustomModal() {
     const dispatch = useDispatch();
     const editedData = useSelector((state) => state?.editOrder.editedData)
-    console.log(editedData, "editedData");
     const [formData, setFormData] = useState(editedData);
 
     const isEditModalOpen = useSelector(state => state?.editModal.isEditModalOpen);

@@ -1,4 +1,3 @@
-// editSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const EditSlice = createSlice({

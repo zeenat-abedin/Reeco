@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    approvedRows: [], // Initialize as an empty array
-    missing: [], // Renamed from Missing to lowercase "missing"
-    missingUrgent: [] // Renamed from MissingUrgent to lowercase "missingUrgent"
+    approvedRows: [], 
+    missing: [], 
+    missingUrgent: []
 }
 
 const StatusSlice = createSlice({
@@ -13,10 +13,10 @@ const StatusSlice = createSlice({
         addApprovedRow: (state, action) => {
             state.approvedRows.push(action.payload);
         },
-        addMissing: (state, action) => { // Renamed from Missing to "addMissing"
+        addMissing: (state, action) => { 
             state.missingUrgent.push(action.payload);
         },
-        addMissingUrgent: (state, action) => { // Renamed from MissingUrgent to "addMissingUrgent"
+        addMissingUrgent: (state, action) => {
             state.missing.push(action.payload);
         },
     },

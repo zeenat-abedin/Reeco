@@ -1,4 +1,6 @@
-import * as React from 'react';
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -13,7 +15,7 @@ import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
 import PrintIcon from '@mui/icons-material/Print';
-import { useDispatch, useSelector } from 'react-redux';
+
 import { openModal } from './ModalSlice/ModalSlice';
 import { OrderListDataRecords } from '../Constant/OrderListdata';
 import { addMissing, addMissingUrgent, addApprovedRow } from './StatusSlice/StatusSlice';
@@ -22,6 +24,7 @@ import { Modal } from '@mui/material';
 import { addOrderList } from './OrderSlice/OrderSlice';
 import { openModalEdit } from './EditModalSlice/EditModalSlice';
 import { startEditing } from './EditOrderListSlice/EditOrderListSlice';
+
 function createData(name, calories, fat, carbs, protein) {
     return { name, calories, fat, carbs, protein };
 }
@@ -36,8 +39,8 @@ const rows = [
 
 export default function OrderTable() {
 
-    const [orderData, setOrderdata] = React.useState([])
-    const [missingRowsData, setMissingRowsData] = React.useState(null); // Step 1: Track approved rows
+    const [orderData, setOrderdata] =useState([])
+    const [missingRowsData, setMissingRowsData] =useState(null); // Step 1: Track approved rows
     const dispatch = useDispatch();
     const Data = useSelector((state) => state?.modal)
     const StatusData = useSelector((state) => state?.status)
@@ -85,7 +88,7 @@ export default function OrderTable() {
     };
     console.log("Missing Array:", StatusData.Missing);
     console.log("MissingUrgent Array:", StatusData.MissingUrgent);
-    React.useEffect(() => {
+useEffect(() => {
         if (OrderListDataRecords) {
             dispatch(addOrderList(OrderListDataRecords));
         }

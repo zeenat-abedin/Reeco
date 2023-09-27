@@ -7,7 +7,6 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { styled } from '@mui/system';
 import { Box } from '@mui/material';
-import OrderTable from './OrderTable';
 
 const StyledAppBar = styled(AppBar)`
   background-color: #1e633f;

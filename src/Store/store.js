@@ -1,4 +1,4 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import { configureStore  } from '@reduxjs/toolkit';
 import RootReducer from './RootReducer';
 import {
     persistStore,
@@ -11,11 +11,13 @@ import {
     REGISTER,
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
+
 const persistConfig = {
     key: 'root',
     version: 1,
     storage,
 };
+
 const persistedReducer = persistReducer(persistConfig, RootReducer);
 
 export const store = configureStore({
@@ -27,4 +29,5 @@ export const store = configureStore({
             },
         }),
 });
+
 export const persistor = persistStore(store)

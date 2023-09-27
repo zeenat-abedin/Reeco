@@ -1,13 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Provider } from "react-redux";
 import MainView from './pages'
+
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import { Provider } from 'react-redux';
+
 import { store, persistor } from './Store/store';
 import CustomModal from './component/Modal';
-import { PersistGate } from 'redux-persist/integration/react'; // Import PersistGate
+import { PersistGate } from 'redux-persist/integration/react';
 
 const App = () => {
   return (
