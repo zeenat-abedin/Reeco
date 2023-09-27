@@ -1,0 +1,53 @@
+body {
+  background-color: #fbfbfb !important;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+  font: inherit;
+  letter-spacing: inherit;
+  color: currentColor;
+  padding: 4px 0 5px;
+  border: 0;
+  box-sizing: content-box;
+  background: none;
+  height: 1.4375em !important;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+  min-width: 0;
+  width: 300px !important;
+  -webkit-animation-name: mui-auto-fill-cancel;
+  animation-name: mui-auto-fill-cancel;
+  -webkit-animation-duration: 10ms;
+  animation-duration: 10ms;
+  padding: 10.5px 18px !important;
+  padding-right: 0;
+  border-radius: 50% !important;
+}
+
+.css-1wnsr1i {
+  border: 0px !important;
+  padding: 18px 8px !important;
+  width: 345px !important;
+}
+
+.css-1ex1afd-MuiTableCell-root {
+  width: 26% !important;
+}
+
+.input-style {
+  padding: 0px 5px !important;
+  margin: 5px 0px;
+  width: 65px !important;
+}
